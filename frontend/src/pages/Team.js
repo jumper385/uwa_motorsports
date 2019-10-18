@@ -6,7 +6,7 @@ const Team = (props) => {
     return(
         <div>
             <h1>Our Team</h1>
-            {props.team.map( ({name}) => (<p key={name}>{name}</p>) )}
+            {props.team.map( ({name}) => (<p  key={name}>{name}</p>) )}
         </div>
     )
 }
