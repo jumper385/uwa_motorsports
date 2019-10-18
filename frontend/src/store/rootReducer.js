@@ -6,6 +6,10 @@ const teamState = [
     {name:'name3'},
 ]
 
+const carState = [
+    {part:'suspension', description:'yehhh idk...'}
+]
+
 const teamReducer = (state = teamState, action) => {
     switch(action.type){
         case "ADD_MEMBER":
@@ -16,13 +20,13 @@ const teamReducer = (state = teamState, action) => {
     }
 }
 
-const nullReducer = (state = 12345, action) => {
+const carReducer = (state = carState, action) => {
     switch(action.type){
-        default: 
+        default:
             return state
     }
 }
 
-const rootReducer = combineReducers({team: teamReducer, null:nullReducer})
+const rootReducer = combineReducers({team: teamReducer, car:carReducer})
 
 export default rootReducer

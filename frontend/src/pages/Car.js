@@ -1,11 +1,26 @@
 import React from 'react'
+import { connect } from 'react-redux'
 
 class Car extends React.Component{
     render(){
         return(
-            <h1>Hello World</h1>
+            <div>
+                <h1>The Car</h1>
+                <h2>The Parts</h2>
+                {this.props.car.map( ({part, description}, index) => {
+                    return(
+                    <div>
+                        <h3>{part}</h3>
+                        <p>{description}</p>
+                    </div>)
+                } )}
+            </div>
         )
     }
 }
 
-export default Car
+const mapStateToDispatch = state => ({
+    car: state.car
+})
+
+export default connect(mapStateToDispatch)(Car)

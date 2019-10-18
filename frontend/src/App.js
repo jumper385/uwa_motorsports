@@ -3,6 +3,7 @@ import React from 'react';
 import { Link, BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 
 import Team from './pages/Team'
+import Car from './pages/Car'
 
 class App extends React.Component{
   render(){
@@ -30,7 +31,6 @@ class App extends React.Component{
 }
 
 const Home = () => {return(<h1>UWA Motor Sports</h1>)}
-const Car = () => {return(<h1>The Car</h1>)}
 const Contact = () => {return(<h1>Contact</h1>)}
 
 export default App
